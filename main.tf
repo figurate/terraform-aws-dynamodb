@@ -3,9 +3,10 @@
  *
  * Purpose: Blueprints for templated DynamoDB tables
  */
-resource "aws_dynamodb_table" "tf_state_lock" {
-  name     = var.name
-  hash_key = var.hash_key
+resource "aws_dynamodb_table" "table" {
+  name      = var.name
+  hash_key  = var.hash_key
+  range_key = var.range_key
   dynamic "attribute" {
     for_each = var.attributes
     content {
