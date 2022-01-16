@@ -12,8 +12,8 @@ clean:
 
 validate:
 	$(TERRAFORM) init && $(TERRAFORM) validate && \
-		$(TERRAFORM) init modules/terraform-lock && $(TERRAFORM) validate modules/terraform-lock && \
-		$(TERRAFORM) init modules/single-table && $(TERRAFORM) validate modules/single-table
+		$(TERRAFORM) -chdir=modules/terraform-lock init && $(TERRAFORM) -chdir=modules/terraform-lock validate && \
+		$(TERRAFORM) -chdir=modules/single-table init && $(TERRAFORM) -chdir=modules/single-table validate
 
 test: validate
 	$(CHECKOV) -d /work
