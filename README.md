@@ -1,6 +1,6 @@
 # ![AWS](aws-logo.png) DynamoDB Table
 
-![AWS DynamoDB Table](aws\_dynamodb\_table.png)
+[![CI](https://github.com/figurate/terraform-aws-dynamodb-table/actions/workflows/main.yml/badge.svg)](https://github.com/figurate/terraform-aws-dynamodb-table/actions/workflows/main.yml)
 
 Purpose: Blueprints for templated DynamoDB tables
 
